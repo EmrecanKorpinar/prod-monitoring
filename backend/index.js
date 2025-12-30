@@ -113,13 +113,21 @@ let appMetrics = {
 
 // Rate limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 500, // limit each IP to 500 requests per minute (for dashboard auto-refresh)
   message: "Too many requests from this IP, please try again later."
 });
 
 app.use(limiter);
-app.use(cors());
+
+// CORS configuration for dashboard
+app.use(cors({
+  origin: ['http://localhost:8000', 'http://localhost:8080', 'http://127.0.0.1:8000', 'http://127.0.0.1:8080'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'X-API-Token', 'Authorization'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Response time tracking
@@ -280,13 +288,17 @@ app.get("/health/processes", authenticate, (req, res) => {
   try {
     const healthFile = path.join(logDir, "process_health.json");
     if (fs.existsSync(healthFile)) {
-      const health = JSON.parse(fs.readFileSync(healthFile, "utf8"));
+      // Remove all newlines and extra whitespace, keep only single spaces
+      let rawData = fs.readFileSync(healthFile, "utf8");
+      // Remove newlines within JSON strings
+      rawData = rawData.split('\n').map(line => line.trim()).join('');
+      const health = JSON.parse(rawData);
       res.json(health);
     } else {
       res.json({ error: "Health data not available" });
     }
   } catch (error) {
-    logger.error("Error reading process health", { error: error.message });
+    logger.error("Error reading process health", { error: error.message, stack: error.stack });
     res.status(500).json({ error: "Failed to read process health" });
   }
 });

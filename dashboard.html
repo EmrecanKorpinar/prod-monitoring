@@ -200,6 +200,16 @@
         </div>
         
         <div class="logs-section">
+            <h2>🏥 Process Health</h2>
+            <div id="processHealthContent">Loading...</div>
+        </div>
+        
+        <div class="logs-section">
+            <h2>📈 Application Metrics</h2>
+            <div id="appMetricsContent">Loading...</div>
+        </div>
+        
+        <div class="logs-section">
             <h2>⚠️ Recent Alerts</h2>
             <div id="alerts"></div>
         </div>
@@ -213,17 +223,27 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const API_URL = 'http://localhost:8080';
+        const API_TOKEN = 'admin-token-123'; // Admin token for full access
         let chart = null;
         let countdown = 30;
         
         // Initialize chart
         const ctx = document.getElementById('metricsChart').getContext('2d');
         
+        // Fetch with authentication
+        async function apiFetch(endpoint) {
+            const response = await fetch(`${API_URL}${endpoint}`, {
+                headers: {
+                    'X-API-Token': API_TOKEN
+                }
+            });
+            return response.json();
+        }
+        
         async function loadData() {
             try {
                 // Load metrics
-                const metricsRes = await fetch(`${API_URL}/metrics`);
-                const metricsData = await metricsRes.json();
+                const metricsData = await apiFetch('/metrics');
                 
                 if (metricsData.metrics && metricsData.metrics.length > 0) {
                     const latest = metricsData.metrics[metricsData.metrics.length - 1];
@@ -241,14 +261,28 @@
                 }
                 
                 // Load alerts
-                const alertsRes = await fetch(`${API_URL}/alerts`);
-                const alertsData = await alertsRes.json();
+                const alertsData = await apiFetch('/alerts');
                 displayLogs('alerts', alertsData.alerts || []);
                 
                 // Load security logs
-                const securityRes = await fetch(`${API_URL}/security`);
-                const securityData = await securityRes.json();
+                const securityData = await apiFetch('/security');
                 displayLogs('security', securityData.logs || []);
+                
+                // Load process health
+                try {
+                    const healthData = await apiFetch('/health/processes');
+                    displayProcessHealth(healthData);
+                } catch (e) {
+                    document.getElementById('process-health').innerHTML = '<div class="log-entry error">Process health data not available</div>';
+                }
+                
+                // Load application metrics
+                try {
+                    const appMetricsData = await apiFetch('/metrics/application');
+                    displayAppMetrics(appMetricsData);
+                } catch (e) {
+                    document.getElementById('app-metrics').innerHTML = '<div class="log-entry error">Application metrics not available</div>';
+                }
                 
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -288,6 +322,90 @@
                                  log.includes('WARNING') ? 'warning' : '';
                 return `<div class="log-entry ${className}">${log}</div>`;
             }).join('');
+        }
+        
+        function displayProcessHealth(data) {
+            const container = document.getElementById('processHealthContent');
+            if (!container) {
+                console.error('Element processHealthContent not found');
+                return;
+            }
+            if (!data || !data.services) {
+                container.innerHTML = '<div class="log-entry error">No process health data</div>';
+                return;
+            }
+            
+            let servicesHTML = '';
+            
+            // Docker containers
+            if (data.services.docker_containers) {
+                Object.entries(data.services.docker_containers).forEach(([name, info]) => {
+                    const statusClass = info.status === 'running' ? 'success' : 'error';
+                    const restarts = info.details?.restarts || 0;
+                    servicesHTML += `<div class="log-entry ${statusClass}">
+                        <strong>Docker: ${name}</strong>: ${info.status} (restarts: ${restarts})
+                    </div>`;
+                });
+            }
+            
+            // System services
+            if (data.services.system_services) {
+                Object.entries(data.services.system_services).forEach(([name, status]) => {
+                    const statusClass = status === 'running' ? 'success' : 'warning';
+                    servicesHTML += `<div class="log-entry ${statusClass}">
+                        <strong>Service: ${name}</strong>: ${status}
+                    </div>`;
+                });
+            }
+            
+            // Ports
+            if (data.services.ports) {
+                Object.entries(data.services.ports).forEach(([name, status]) => {
+                    const statusClass = status === 'running' ? 'success' : 'warning';
+                    servicesHTML += `<div class="log-entry ${statusClass}">
+                        <strong>Port: ${name}</strong>: ${status}
+                    </div>`;
+                });
+            }
+            
+            // Summary
+            if (data.summary) {
+                servicesHTML += `<div class="log-entry" style="margin-top: 10px; border-top: 1px solid #ddd; padding-top: 10px;">
+                    <strong>Summary:</strong> ${data.summary.running_containers}/${data.summary.total_containers} containers running, 
+                    Status: ${data.summary.health_status}
+                </div>`;
+            }
+            
+            container.innerHTML = servicesHTML || '<div class="log-entry">No services found</div>';
+        }
+        
+        function displayAppMetrics(data) {
+            const container = document.getElementById('appMetricsContent');
+            if (!container) {
+                console.error('Element appMetricsContent not found');
+                return;
+            }
+            if (!data) {
+                container.innerHTML = '<div class="log-entry error">No application metrics data</div>';
+                return;
+            }
+            
+            const metrics = `
+                <div class="log-entry">
+                    <strong>Request Count:</strong> ${data.requestCount || 0}
+                </div>
+                <div class="log-entry">
+                    <strong>Avg Response Time:</strong> ${data.avgResponseTime ? data.avgResponseTime.toFixed(2) + 'ms' : 'N/A'}
+                </div>
+                <div class="log-entry">
+                    <strong>Error Rate:</strong> ${data.errorRate ? (data.errorRate * 100).toFixed(2) + '%' : '0%'}
+                </div>
+                <div class="log-entry">
+                    <strong>Throughput:</strong> ${data.throughput ? data.throughput.toFixed(2) + ' req/s' : 'N/A'}
+                </div>
+            `;
+            
+            container.innerHTML = metrics;
         }
         
         function updateChart(metrics) {
@@ -355,8 +473,25 @@
             }
         }, 1000);
         
+        // Load process health and app metrics
+        async function loadAdditionalMetrics() {
+            try {
+                const healthData = await apiFetch('/health/processes');
+                displayProcessHealth(healthData);
+                
+                const appMetrics = await apiFetch('/metrics/app');
+                displayAppMetrics(appMetrics);
+            } catch (error) {
+                console.error('Error loading additional metrics:', error);
+            }
+        }
+        
+        // Auto-refresh for additional metrics
+        setInterval(loadAdditionalMetrics, 10000);
+        
         // Initial load
         loadData();
+        loadAdditionalMetrics();
     </script>
 </body>
 </html>
