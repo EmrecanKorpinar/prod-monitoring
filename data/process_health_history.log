@@ -29,3 +29,96 @@ unknown","uptime":"2025-12-30T20:38:56.974425559Z","restarts":0}}
   }
 }
 
+{
+  "timestamp": "2025-12-30 23:54:09",
+  "services": {
+    "docker_containers": {
+      "nginx": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:01.323335271Z","restarts":0}},
+      "backend1": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.892946937Z","restarts":0}},
+      "backend2": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.906602212Z","restarts":0}}
+    },
+    "system_services": {
+      "redis": "running",
+      "ssh": "stopped"
+    },
+    "ports": {
+      "nginx_80": "running",
+      "nginx_8080": "running",
+      "backend_3000": "stopped",
+      "mysql_3306": "stopped",
+      "redis_6379": "running"
+    }
+  },
+  "summary": {
+    "total_containers": 3,
+    "running_containers": 3,
+    "critical_services_down": 0,
+    "health_status": "healthy"
+  }
+}
+
+{
+  "timestamp": "2025-12-30 23:56:11",
+  "services": {
+    "docker_containers": {
+      "nginx": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:55:18.187143107Z","restarts":0}},
+      "backend1": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.892946937Z","restarts":0}},
+      "backend2": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.906602212Z","restarts":0}}
+    },
+    "system_services": {
+      "redis": "running",
+      "ssh": "stopped"
+    },
+    "ports": {
+      "nginx_80": "running",
+      "nginx_8080": "running",
+      "backend_3000": "stopped",
+      "mysql_3306": "stopped",
+      "redis_6379": "running"
+    }
+  },
+  "summary": {
+    "total_containers": 3,
+    "running_containers": 3,
+    "critical_services_down": 0,
+    "health_status": "healthy"
+  }
+}
+
+{
+  "timestamp": "2025-12-30 23:58:07",
+  "services": {
+    "docker_containers": {
+      "nginx": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:55:18.187143107Z","restarts":0}},
+      "backend1": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.892946937Z","restarts":0}},
+      "backend2": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:54:00.906602212Z","restarts":0}}
+    },
+    "system_services": {
+      "redis": "running",
+      "ssh": "stopped"
+    },
+    "ports": {
+      "nginx_80": "running",
+      "nginx_8080": "running",
+      "backend_3000": "stopped",
+      "mysql_3306": "stopped",
+      "redis_6379": "running"
+    }
+  },
+  "summary": {
+    "total_containers": 3,
+    "running_containers": 3,
+    "critical_services_down": 0,
+    "health_status": "healthy"
+  }
+}
+

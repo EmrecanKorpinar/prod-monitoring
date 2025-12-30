@@ -1,0 +1,459 @@
+[2025-12-30 23:56:57] ===== System Log Analysis Started =====
+[2025-12-30 23:56:57] --- Journal Errors (Last 50) ---
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+[2025-12-30 23:56:57] --- Journal Warnings (Last 50) ---
+Dec 30 23:03:27 DESKTOP-DVM73AD unknown: WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+Dec 30 23:16:33 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Lockdown as a last-resort fallback
+Dec 30 23:16:33 DESKTOP-DVM73AD xdg-desktop-por[18643]: The preferred method to match portal implementations to desktop environments is to use the portals.conf(5) configuration file
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: No skeleton to export
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Failed connect to PipeWire: Couldn't create PipeWire context
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+Dec 30 23:16:37 DESKTOP-DVM73AD io.snapcraft.Settings[18883]: userd.go:93: Starting snap userd
+Dec 30 23:24:14 DESKTOP-DVM73AD kernel: hrtimer: interrupt took 11297925 ns
+[2025-12-30 23:56:57] --- Critical Service Failures ---
+-- No entries --
+[2025-12-30 23:56:57] --- Kernel Errors (dmesg) ---
+[Tue Dec 30 16:31:47 2025] Exception: 
+[Tue Dec 30 16:31:47 2025] Operation canceled @p9io.cpp:258 (AcceptAsync)
+
+[Tue Dec 30 16:31:47 2025] WSL (1 - init()) ERROR: InitEntryUtilityVm:2510: Init has exited. Terminating distribution
+[Tue Dec 30 16:47:06 2025] WSL (222) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
+[Tue Dec 30 17:04:22 2025] /dev/sde: Can't open blockdev
+[Tue Dec 30 17:04:23 2025] WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+[Tue Dec 30 17:04:23 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 17:04:25 2025] misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+[Tue Dec 30 17:04:25 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:25 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:04:27 2025] netlink: 'initd': attribute type 4 has an invalid length.
+[Tue Dec 30 17:04:28 2025] virtiofs: Unknown parameter 'negative_dentry_timeout'
+[Tue Dec 30 17:05:32 2025] Exception: 
+[Tue Dec 30 17:05:32 2025] Operation canceled @p9io.cpp:258 (AcceptAsync)
+
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+[Tue Dec 30 17:05:32 2025] Aborting journal on device sdf-8.
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:32 2025] Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+[Tue Dec 30 17:05:32 2025] JBD2: I/O error when updating journal superblock for sdf-8.
+[Tue Dec 30 17:05:33 2025] I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+[Tue Dec 30 17:05:47 2025] Aborting journal on device sde-8.
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] Buffer I/O error on dev sde, logical block 65537, lost sync page write
+[Tue Dec 30 17:05:47 2025] JBD2: I/O error when updating journal superblock for sde-8.
+[Tue Dec 30 17:05:48 2025] WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+[Tue Dec 30 17:05:48 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:05:50 2025] netlink: 'initd': attribute type 4 has an invalid length.
+[Tue Dec 30 17:05:50 2025] virtiofs: Unknown parameter 'negative_dentry_timeout'
+[Tue Dec 30 22:32:01 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 22:52:48 2025] hrtimer: interrupt took 11297925 ns
+[2025-12-30 23:56:57] --- Syslog Errors (Last 30 minutes) ---
+2025-12-30T16:45:40.409680+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Main process exited, code=exited, status=1/FAILURE
+2025-12-30T16:45:40.409847+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Failed with result 'exit-code'.
+2025-12-30T16:45:40.410038+03:00 DESKTOP-DVM73AD systemd[623]: Failed to start pulseaudio.service - Sound Service.
+2025-12-30T16:45:40.759782+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Failed with result 'exit-code'.
+2025-12-30T16:45:40.759853+03:00 DESKTOP-DVM73AD systemd[623]: Failed to start pulseaudio.service - Sound Service.
+2025-12-30T16:45:40.759921+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.socket: Failed with result 'service-start-limit-hit'.
+2025-12-30T16:50:03.135268+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]: #033[33mWARNING#033[0m Could not ensure valid Landscape configuration: could not ensure valid Landscape configuration: could not register distro to Landscape: could not enable Landscape: /usr/bin/landscape-config: error: exit status 1.
+2025-12-30T16:50:03.135442+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]:     Stderr: Failed to enable unit: Message recipient disconnected from message bus without replying
+2025-12-30T16:50:19.076885+03:00 DESKTOP-DVM73AD NetworkManager[6007]: <info>  [1767102619.0768] failed to open /run/network/ifstate
+2025-12-30T17:00:17.132498+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]: #033[33mWARNING#033[0m Exiting after could not ensure valid Landscape configuration: could not register distro to Landscape: could not enable Landscape: /usr/bin/landscape-config: error: exit status 1.
+2025-12-30T17:00:17.132649+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]:     Stderr: Failed to enable unit: Message recipient disconnected from message bus without replying
+2025-12-30T17:02:58.796783+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:02:59.088999+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:02:59.093745+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:02:59.093803+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:02:59.096926+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:02:59.104838+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:02:59.104921+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:02:59.104924+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:03:15.089084+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init()) ERROR: InitEntryUtilityVm:2510: Init has exited. Terminating distribution
+2025-12-30T17:18:33.581213+03:00 DESKTOP-DVM73AD kernel: WSL (222) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
+2025-12-30T17:35:49.857082+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:35:52.692765+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:35:52.827546+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:35:52.829400+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:35:52.860182+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:35:52.926551+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:35:52.928123+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:35:52.938701+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:36:59.599296+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+2025-12-30T17:36:59.623349+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:36:59.623360+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:36:59.627899+03:00 DESKTOP-DVM73AD kernel: Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+2025-12-30T17:36:59.627947+03:00 DESKTOP-DVM73AD kernel: JBD2: I/O error when updating journal superblock for sdf-8.
+2025-12-30T17:37:00.215239+03:00 DESKTOP-DVM73AD kernel: I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+2025-12-30T17:37:15.460155+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+2025-12-30T17:37:15.463332+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:37:15.463333+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:37:15.463335+03:00 DESKTOP-DVM73AD kernel: Buffer I/O error on dev sde, logical block 65537, lost sync page write
+2025-12-30T17:37:15.463336+03:00 DESKTOP-DVM73AD kernel: JBD2: I/O error when updating journal superblock for sde-8.
+2025-12-30T17:37:16.787928+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:37:17.419227+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:37:17.423521+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:37:17.429627+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:37:17.429640+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:37:17.439180+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:37:17.439223+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:37:17.443027+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T18:25:47.053173+03:00 DESKTOP-DVM73AD apt-helper[11365]: E: Sub-process nm-online returned an error code (1)
+2025-12-30T23:16:34.116924+03:00 DESKTOP-DVM73AD xdg-desktop-por[18643]: Failed connect to PipeWire: Couldn't create PipeWire context
+[2025-12-30 23:56:57] --- Failed Login Attempts ---
+[2025-12-30 23:56:57] --- Successful Root Logins ---
+[2025-12-30 23:56:57] --- Recent Sudo Usage ---
+2025-12-30T17:11:49.503598+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:11:49.528764+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T17:11:53.284891+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt git
+2025-12-30T17:11:53.287270+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:11:53.299848+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T17:14:51.777175+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install nginx
+2025-12-30T17:14:51.782022+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:14:58.777675+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:02:59.703481+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/5 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt update
+2025-12-30T19:02:59.704412+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:03:03.467431+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:03:13.808337+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/5 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2025-12-30T19:03:13.810829+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:03:21.267633+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:18:16.937420+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2025-12-30T19:18:16.939278+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:18:18.106343+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:21:37.752462+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install firefox -y
+2025-12-30T19:21:37.753533+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:27:21.278373+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+[2025-12-30 23:56:57] --- Docker Container Logs (Errors) ---
+  Container: prod-monitoring-nginx-1
+2025/12/30 20:54:54 [error] 30#30: *4 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 172.20.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8080"
+  Container: prod-monitoring-backend1-1
+ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+  Container: prod-monitoring-backend2-1
+ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+2025-12-30 20:56:03 [backend-2] [31merror[39m: Error reading process health {"error":"Unexpected token \n in JSON at position 158"}
+  Container: backend-backend1-1
+  Container: backend-backend2-1
+[2025-12-30 23:56:57] --- Disk Space Status ---
+Filesystem                                Size  Used Avail Use% Mounted on
+/dev/sdd                                 1007G  7.7G  948G   1% /
+rootfs                                    1.9G  2.7M  1.9G   1% /init
+none                                      1.9G     0  1.9G   0% /dev/shm
+none                                      1.9G  1.1M  1.9G   1% /run
+none                                      1.9G     0  1.9G   0% /run/lock
+none                                      1.9G  200K  1.9G   1% /run/user
+tmpfs                                     382M  100K  382M   1% /run/user/1000
+tmpfs                                     1.9G  220K  1.9G   1% /run/qemu
+drivers                                   455G  394G   61G  87% /usr/lib/wsl/drivers
+none                                      1.9G     0  1.9G   0% /usr/lib/wsl/lib
+none                                      1.9G  4.0K  1.9G   1% /mnt/wsl
+none                                      1.9G   76K  1.9G   1% /mnt/wslg/versions.txt
+none                                      1.9G   76K  1.9G   1% /mnt/wslg/doc
+none                                      1.9G     0  1.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+snapfuse                                   74M   74M     0 100% /snap/core22/2193
+snapfuse                                   74M   74M     0 100% /snap/core22/2133
+snapfuse                                   51M   51M     0 100% /snap/snapd/25202
+snapfuse                                   51M   51M     0 100% /snap/snapd/25577
+snapfuse                                  4.5M  4.5M     0 100% /snap/tree/54
+C:\                                       455G  394G   61G  87% /mnt/c
+D:\                                       932G  828G  104G  89% /mnt/d
+tmpfs                                     382M   96K  382M   1% /run/user/0
+none                                      1.9G  704K  1.9G   1% /mnt/wsl/docker-desktop/shared-sockets/host-services
+/dev/sdg                                  130M   66M   54M  55% /mnt/wsl/docker-desktop/docker-desktop-user-distro
+/dev/loop0                                736M  736M     0 100% /mnt/wsl/docker-desktop/cli-tools
+C:\Program Files\Docker\Docker\resources  455G  394G   61G  87% /Docker/host
+snapfuse                                  128K  128K     0 100% /snap/bare/5
+snapfuse                                   92M   92M     0 100% /snap/gtk-common-themes/1535
+snapfuse                                  251M  251M     0 100% /snap/firefox/7559
+snapfuse                                  517M  517M     0 100% /snap/gnome-42-2204/226
+[2025-12-30 23:56:57] --- System Status Summary ---
+  Uptime: up 7 hours, 42 minutes
+  Load Average:  0.30, 0.40, 0.38
+  Memory: 2.4Gi/3.7Gi (64.8649%)
+  Users logged in: 2
+[2025-12-30 23:56:57] --- Network Status ---
+tcp        0      0 127.0.0.1:46859         0.0.0.0:*               LISTEN      17046/node          
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 10.255.255.254:53       0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.54:53           0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 ::1:631                 :::*                    LISTEN      -                   
+tcp6       0      0 :::8080                 :::*                    LISTEN      -                   
+tcp6       0      0 ::1:6379                :::*                    LISTEN      -                   
+[2025-12-30 23:56:57] --- Filesystem Errors ---
+[ 1062.143785] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3016.820280] EXT4-fs (sde): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3016.845805] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3017.102730] EXT4-fs (sde): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3019.359756] EXT4-fs (sdf): recovery complete
+[ 3019.545099] EXT4-fs (sdf): mounted filesystem c1624633-e400-44ff-b8dc-10307253907a r/w with ordered data mode. Quota mode: none.
+[ 3087.261499] EXT4-fs (sdf): shut down requested (2)
+[ 3087.266466] Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+[ 3087.267382] JBD2: I/O error when updating journal superblock for sdf-8.
+[ 3087.807650] I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[ 3101.884257] EXT4-fs (sde): shut down requested (2)
+[ 3101.886183] Buffer I/O error on dev sde, logical block 65537, lost sync page write
+[ 3101.886739] JBD2: I/O error when updating journal superblock for sde-8.
+[ 3102.306765] EXT4-fs (sdg): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3102.328477] EXT4-fs (sdg): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3102.429031] EXT4-fs (sdg): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3103.560854] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3103.565325] EXT4-fs (sdf): unmounting filesystem c1624633-e400-44ff-b8dc-10307253907a.
+[ 3103.706141] EXT4-fs (sdh): recovery complete
+[ 3103.707340] EXT4-fs (sdh): mounted filesystem c1624633-e400-44ff-b8dc-10307253907a r/w with ordered data mode. Quota mode: none.
+[2025-12-30 23:56:57] ===== System Log Analysis Completed =====
+
+[2025-12-30 23:58:10] ===== System Log Analysis Started =====
+[2025-12-30 23:58:10] --- Journal Errors (Last 50) ---
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+[2025-12-30 23:58:10] --- Journal Warnings (Last 50) ---
+Dec 30 23:03:27 DESKTOP-DVM73AD unknown: WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+Dec 30 23:16:33 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Lockdown as a last-resort fallback
+Dec 30 23:16:33 DESKTOP-DVM73AD xdg-desktop-por[18643]: The preferred method to match portal implementations to desktop environments is to use the portals.conf(5) configuration file
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: No skeleton to export
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-portal[18643]: pw.conf: can't load config client.conf: No such file or directory
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Failed connect to PipeWire: Couldn't create PipeWire context
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+Dec 30 23:16:34 DESKTOP-DVM73AD xdg-desktop-por[18643]: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+Dec 30 23:16:37 DESKTOP-DVM73AD io.snapcraft.Settings[18883]: userd.go:93: Starting snap userd
+Dec 30 23:24:14 DESKTOP-DVM73AD kernel: hrtimer: interrupt took 11297925 ns
+[2025-12-30 23:58:10] --- Critical Service Failures ---
+-- No entries --
+[2025-12-30 23:58:10] --- Kernel Errors (dmesg) ---
+[Tue Dec 30 16:31:47 2025] Exception: 
+[Tue Dec 30 16:31:47 2025] Operation canceled @p9io.cpp:258 (AcceptAsync)
+
+[Tue Dec 30 16:31:47 2025] WSL (1 - init()) ERROR: InitEntryUtilityVm:2510: Init has exited. Terminating distribution
+[Tue Dec 30 16:47:06 2025] WSL (222) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
+[Tue Dec 30 17:04:22 2025] /dev/sde: Can't open blockdev
+[Tue Dec 30 17:04:23 2025] WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+[Tue Dec 30 17:04:23 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 17:04:25 2025] misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+[Tue Dec 30 17:04:25 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:04:26 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:04:27 2025] netlink: 'initd': attribute type 4 has an invalid length.
+[Tue Dec 30 17:04:28 2025] virtiofs: Unknown parameter 'negative_dentry_timeout'
+[Tue Dec 30 17:05:32 2025] Exception: 
+[Tue Dec 30 17:05:32 2025] Operation canceled @p9io.cpp:258 (AcceptAsync)
+
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+[Tue Dec 30 17:05:32 2025] Aborting journal on device sdf-8.
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:32 2025] device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:32 2025] Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+[Tue Dec 30 17:05:32 2025] JBD2: I/O error when updating journal superblock for sdf-8.
+[Tue Dec 30 17:05:33 2025] I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+[Tue Dec 30 17:05:47 2025] Aborting journal on device sde-8.
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+[Tue Dec 30 17:05:47 2025] Buffer I/O error on dev sde, logical block 65537, lost sync page write
+[Tue Dec 30 17:05:47 2025] JBD2: I/O error when updating journal superblock for sde-8.
+[Tue Dec 30 17:05:48 2025] WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+[Tue Dec 30 17:05:48 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+[Tue Dec 30 17:05:49 2025] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+[Tue Dec 30 17:05:50 2025] netlink: 'initd': attribute type 4 has an invalid length.
+[Tue Dec 30 17:05:50 2025] virtiofs: Unknown parameter 'negative_dentry_timeout'
+[Tue Dec 30 22:32:01 2025] WSL (1 - init(docker-desktop)) WARNING: /usr/share/zoneinfo/Europe/Istanbul not found. Is the tzdata package installed?
+[Tue Dec 30 22:52:48 2025] hrtimer: interrupt took 11297925 ns
+[2025-12-30 23:58:10] --- Syslog Errors (Last 30 minutes) ---
+2025-12-30T16:45:40.409680+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Main process exited, code=exited, status=1/FAILURE
+2025-12-30T16:45:40.409847+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Failed with result 'exit-code'.
+2025-12-30T16:45:40.410038+03:00 DESKTOP-DVM73AD systemd[623]: Failed to start pulseaudio.service - Sound Service.
+2025-12-30T16:45:40.759782+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.service: Failed with result 'exit-code'.
+2025-12-30T16:45:40.759853+03:00 DESKTOP-DVM73AD systemd[623]: Failed to start pulseaudio.service - Sound Service.
+2025-12-30T16:45:40.759921+03:00 DESKTOP-DVM73AD systemd[623]: pulseaudio.socket: Failed with result 'service-start-limit-hit'.
+2025-12-30T16:50:03.135268+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]: #033[33mWARNING#033[0m Could not ensure valid Landscape configuration: could not ensure valid Landscape configuration: could not register distro to Landscape: could not enable Landscape: /usr/bin/landscape-config: error: exit status 1.
+2025-12-30T16:50:03.135442+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]:     Stderr: Failed to enable unit: Message recipient disconnected from message bus without replying
+2025-12-30T16:50:19.076885+03:00 DESKTOP-DVM73AD NetworkManager[6007]: <info>  [1767102619.0768] failed to open /run/network/ifstate
+2025-12-30T17:00:17.132498+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]: #033[33mWARNING#033[0m Exiting after could not ensure valid Landscape configuration: could not register distro to Landscape: could not enable Landscape: /usr/bin/landscape-config: error: exit status 1.
+2025-12-30T17:00:17.132649+03:00 DESKTOP-DVM73AD wsl-pro-service[4754]:     Stderr: Failed to enable unit: Message recipient disconnected from message bus without replying
+2025-12-30T17:02:58.796783+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:02:59.088999+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:02:59.093745+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:02:59.093803+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:02:59.096926+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:02:59.104838+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:02:59.104921+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:02:59.104924+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:03:15.089084+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init()) ERROR: InitEntryUtilityVm:2510: Init has exited. Terminating distribution
+2025-12-30T17:18:33.581213+03:00 DESKTOP-DVM73AD kernel: WSL (222) ERROR: No buffer space available @telemetry.cpp:190 (StartTelemetryAgent)
+2025-12-30T17:35:49.857082+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:35:52.692765+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:35:52.827546+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:35:52.829400+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:35:52.860182+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:35:52.926551+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:35:52.928123+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:35:52.938701+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:36:59.599296+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+2025-12-30T17:36:59.623349+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:36:59.623360+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sdf, sector 1073479680 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:36:59.627899+03:00 DESKTOP-DVM73AD kernel: Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+2025-12-30T17:36:59.627947+03:00 DESKTOP-DVM73AD kernel: JBD2: I/O error when updating journal superblock for sdf-8.
+2025-12-30T17:37:00.215239+03:00 DESKTOP-DVM73AD kernel: I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+2025-12-30T17:37:15.460155+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 0 op 0x1:(WRITE) flags 0x800 phys_seg 0 prio class 2
+2025-12-30T17:37:15.463332+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:37:15.463333+03:00 DESKTOP-DVM73AD kernel: device offline error, dev sde, sector 131074 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2
+2025-12-30T17:37:15.463335+03:00 DESKTOP-DVM73AD kernel: Buffer I/O error on dev sde, logical block 65537, lost sync page write
+2025-12-30T17:37:15.463336+03:00 DESKTOP-DVM73AD kernel: JBD2: I/O error when updating journal superblock for sde-8.
+2025-12-30T17:37:16.787928+03:00 DESKTOP-DVM73AD kernel: WSL (1 - init(docker-desktop)) ERROR: ConfigApplyWindowsLibPath:2092: open /etc/ld.so.conf.d/ld.wsl.conf failed 2
+2025-12-30T17:37:17.419227+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2025-12-30T17:37:17.423521+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:37:17.429627+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:37:17.429640+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T17:37:17.439180+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2025-12-30T17:37:17.439223+03:00 DESKTOP-DVM73AD kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]
+2025-12-30T17:37:17.443027+03:00 DESKTOP-DVM73AD kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2025-12-30T18:25:47.053173+03:00 DESKTOP-DVM73AD apt-helper[11365]: E: Sub-process nm-online returned an error code (1)
+2025-12-30T23:16:34.116924+03:00 DESKTOP-DVM73AD xdg-desktop-por[18643]: Failed connect to PipeWire: Couldn't create PipeWire context
+[2025-12-30 23:58:10] --- Failed Login Attempts ---
+[2025-12-30 23:58:10] --- Successful Root Logins ---
+[2025-12-30 23:58:10] --- Recent Sudo Usage ---
+2025-12-30T17:11:49.503598+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:11:49.528764+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T17:11:53.284891+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt git
+2025-12-30T17:11:53.287270+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:11:53.299848+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T17:14:51.777175+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install nginx
+2025-12-30T17:14:51.782022+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T17:14:58.777675+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:02:59.703481+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/5 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt update
+2025-12-30T19:02:59.704412+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:03:03.467431+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:03:13.808337+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/5 ; PWD=/home/emrecan ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2025-12-30T19:03:13.810829+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:03:21.267633+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:18:16.937420+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install gh -y
+2025-12-30T19:18:16.939278+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:18:18.106343+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+2025-12-30T19:21:37.752462+03:00 DESKTOP-DVM73AD sudo:  emrecan : TTY=pts/0 ; PWD=/home/emrecan/home/prod-monitoring ; USER=root ; COMMAND=/usr/bin/apt install firefox -y
+2025-12-30T19:21:37.753533+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-30T19:27:21.278373+03:00 DESKTOP-DVM73AD sudo: pam_unix(sudo:session): session closed for user root
+[2025-12-30 23:58:10] --- Docker Container Logs (Errors) ---
+  Container: prod-monitoring-nginx-1
+  Container: prod-monitoring-backend1-1
+  Container: prod-monitoring-backend2-1
+2025-12-30 20:56:03 [backend-2] [31merror[39m: Error reading process health {"error":"Unexpected token \n in JSON at position 158"}
+  Container: backend-backend1-1
+  Container: backend-backend2-1
+[2025-12-30 23:58:10] --- Disk Space Status ---
+Filesystem                                Size  Used Avail Use% Mounted on
+/dev/sdd                                 1007G  7.7G  948G   1% /
+rootfs                                    1.9G  2.7M  1.9G   1% /init
+none                                      1.9G     0  1.9G   0% /dev/shm
+none                                      1.9G  1.1M  1.9G   1% /run
+none                                      1.9G     0  1.9G   0% /run/lock
+none                                      1.9G  200K  1.9G   1% /run/user
+tmpfs                                     382M  100K  382M   1% /run/user/1000
+tmpfs                                     1.9G  220K  1.9G   1% /run/qemu
+drivers                                   455G  394G   61G  87% /usr/lib/wsl/drivers
+none                                      1.9G     0  1.9G   0% /usr/lib/wsl/lib
+none                                      1.9G  4.0K  1.9G   1% /mnt/wsl
+none                                      1.9G   76K  1.9G   1% /mnt/wslg/versions.txt
+none                                      1.9G   76K  1.9G   1% /mnt/wslg/doc
+none                                      1.9G     0  1.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+snapfuse                                   74M   74M     0 100% /snap/core22/2193
+snapfuse                                   74M   74M     0 100% /snap/core22/2133
+snapfuse                                   51M   51M     0 100% /snap/snapd/25202
+snapfuse                                   51M   51M     0 100% /snap/snapd/25577
+snapfuse                                  4.5M  4.5M     0 100% /snap/tree/54
+C:\                                       455G  394G   61G  87% /mnt/c
+D:\                                       932G  828G  104G  89% /mnt/d
+tmpfs                                     382M   96K  382M   1% /run/user/0
+none                                      1.9G  704K  1.9G   1% /mnt/wsl/docker-desktop/shared-sockets/host-services
+/dev/sdg                                  130M   66M   54M  55% /mnt/wsl/docker-desktop/docker-desktop-user-distro
+/dev/loop0                                736M  736M     0 100% /mnt/wsl/docker-desktop/cli-tools
+C:\Program Files\Docker\Docker\resources  455G  394G   61G  87% /Docker/host
+snapfuse                                  128K  128K     0 100% /snap/bare/5
+snapfuse                                   92M   92M     0 100% /snap/gtk-common-themes/1535
+snapfuse                                  251M  251M     0 100% /snap/firefox/7559
+snapfuse                                  517M  517M     0 100% /snap/gnome-42-2204/226
+[2025-12-30 23:58:10] --- System Status Summary ---
+  Uptime: up 7 hours, 44 minutes
+  Load Average:  0.45, 0.41, 0.38
+  Memory: 2.4Gi/3.7Gi (64.8649%)
+  Users logged in: 2
+[2025-12-30 23:58:10] --- Network Status ---
+tcp        0      0 127.0.0.1:46859         0.0.0.0:*               LISTEN      17046/node          
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 10.255.255.254:53       0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.54:53           0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 ::1:631                 :::*                    LISTEN      -                   
+tcp6       0      0 :::8080                 :::*                    LISTEN      -                   
+tcp6       0      0 ::1:6379                :::*                    LISTEN      -                   
+[2025-12-30 23:58:10] --- Filesystem Errors ---
+[ 1062.143785] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3016.820280] EXT4-fs (sde): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3016.845805] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3017.102730] EXT4-fs (sde): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3019.359756] EXT4-fs (sdf): recovery complete
+[ 3019.545099] EXT4-fs (sdf): mounted filesystem c1624633-e400-44ff-b8dc-10307253907a r/w with ordered data mode. Quota mode: none.
+[ 3087.261499] EXT4-fs (sdf): shut down requested (2)
+[ 3087.266466] Buffer I/O error on dev sdf, logical block 134184960, lost sync page write
+[ 3087.267382] JBD2: I/O error when updating journal superblock for sdf-8.
+[ 3087.807650] I/O error, dev loop0, sector 112 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[ 3101.884257] EXT4-fs (sde): shut down requested (2)
+[ 3101.886183] Buffer I/O error on dev sde, logical block 65537, lost sync page write
+[ 3101.886739] JBD2: I/O error when updating journal superblock for sde-8.
+[ 3102.306765] EXT4-fs (sdg): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3102.328477] EXT4-fs (sdg): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3102.429031] EXT4-fs (sdg): mounted filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9 r/w with ordered data mode. Quota mode: none.
+[ 3103.560854] EXT4-fs (sde): unmounting filesystem 5b228c48-7df8-4753-942f-6bfcfb308ca9.
+[ 3103.565325] EXT4-fs (sdf): unmounting filesystem c1624633-e400-44ff-b8dc-10307253907a.
+[ 3103.706141] EXT4-fs (sdh): recovery complete
+[ 3103.707340] EXT4-fs (sdh): mounted filesystem c1624633-e400-44ff-b8dc-10307253907a r/w with ordered data mode. Quota mode: none.
+[2025-12-30 23:58:10] ===== System Log Analysis Completed =====
+
