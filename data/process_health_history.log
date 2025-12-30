@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-12-30 23:46:54",
+  "services": {
+    "docker_containers": {
+      "nginx": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:38:57.379420603Z","restarts":0}},
+      "backend1": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:38:56.979825196Z","restarts":0}},
+      "backend2": {"status":"running","details":{"status":"running","health":"
+unknown","uptime":"2025-12-30T20:38:56.974425559Z","restarts":0}}
+    },
+    "system_services": {
+      "redis": "running",
+      "ssh": "stopped"
+    },
+    "ports": {
+      "nginx_80": "running",
+      "nginx_8080": "running",
+      "backend_3000": "stopped",
+      "mysql_3306": "stopped",
+      "redis_6379": "running"
+    }
+  },
+  "summary": {
+    "total_containers": 3,
+    "running_containers": 3,
+    "critical_services_down": 0,
+    "health_status": "healthy"
+  }
+}
+

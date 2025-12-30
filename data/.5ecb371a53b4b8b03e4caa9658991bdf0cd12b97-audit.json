@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/emrecan/home/prod-monitoring/data/.5ecb371a53b4b8b03e4caa9658991bdf0cd12b97-audit.json",
+    "files": [
+        {
+            "date": 1767127137578,
+            "name": "/home/emrecan/home/prod-monitoring/data/error-2025-12-30.log",
+            "hash": "fa0d896daba0606d21156779f18e0cd2996e5ae5932c7bdd0d1db17c6d7c7345"
+        }
+    ],
+    "hashType": "sha256"
+}

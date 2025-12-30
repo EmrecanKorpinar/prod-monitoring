@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitoring Alert Engine
+After=network.target
+
+[Service]
+Type=oneshot
+User=emrecan
+ExecStart=/home/emrecan/home/prod-monitoring/scripts/alert_engine_v2.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

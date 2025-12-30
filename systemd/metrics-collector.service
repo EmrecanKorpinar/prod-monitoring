@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitoring Metrics Collection
+After=network.target
+
+[Service]
+Type=oneshot
+User=emrecan
+ExecStart=/home/emrecan/home/prod-monitoring/scripts/metrics.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
