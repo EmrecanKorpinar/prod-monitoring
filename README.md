@@ -1,4 +1,4 @@
-# 🚀 Enterprise Production Monitoring System
+Enterprise Production Monitoring System
 
 A comprehensive enterprise-grade monitoring and alerting system with real-time metrics, process health monitoring, advanced logging, security auditing, and auto-restart capabilities.
 
@@ -6,28 +6,28 @@ A comprehensive enterprise-grade monitoring and alerting system with real-time m
 [![Docker](https://img.shields.io/badge/Docker-Enabled-blue)](https://www.docker.com/)
 [![Prometheus](https://img.shields.io/badge/Prometheus-Compatible-orange)](https://prometheus.io/)
 
-## ✨ Features
+Features
 
-### 📊 Real-Time System Monitoring
+Real-Time System Monitoring
 - **Comprehensive Metrics**: CPU, Memory, Disk, Load Average, Network I/O, Process Count, System Uptime
 - **Dual Format Export**: JSON and CSV for maximum compatibility
 - **Historical Tracking**: Trend analysis with configurable retention
 - **Prometheus Integration**: Native metrics export for Grafana dashboards
 
-### 🏥 Process Health Monitoring
+Process Health Monitoring
 - **Service Status Tracking**: Monitor nginx, MySQL, Redis, Docker containers
 - **Port Availability**: Real-time port scanning and validation
 - **Container Health**: Docker container status, uptime, and restart count
 - **Auto-Recovery**: Automatic service restart on failure (systemd integration)
 
-### 📝 Advanced Logging System
+Advanced Logging System
 - **Structured Logging**: Winston logger with JSON format
 - **HTTP Request Tracking**: Morgan middleware for all API calls
 - **Daily Log Rotation**: Automatic cleanup with 7-day retention
 - **Multi-Level Logs**: Info, Warning, Error, Critical severity levels
 - **System Log Analysis**: Integration with syslog, dmesg, journalctl
 
-### 🚨 Intelligent Alerting
+ Intelligent Alerting
 - **Multi-Level Alerts**: WARNING (85%) and CRITICAL (90%) thresholds
 - **Flood Prevention**: 10-minute cooldown between duplicate alerts
 - **Multiple Channels**:
@@ -36,7 +36,7 @@ A comprehensive enterprise-grade monitoring and alerting system with real-time m
   - Custom webhook integration
 - **Smart Monitoring**: CPU, Memory, Disk, Load Average, Process health
 
-### 🔒 Security & Auditing
+Security & Auditing
 - **Role-Based Access Control (RBAC)**: Admin, Developer, Read-only roles
 - **API Token Authentication**: Secure token-based API access
 - **Audit Logging**: Complete trail of who did what and when
@@ -45,26 +45,26 @@ A comprehensive enterprise-grade monitoring and alerting system with real-time m
 - **Security Scanning**: Unauthorized port detection, failed login monitoring
 - **Auth Log Analysis**: SSH brute force attempt detection
 
-### 🎨 Web Dashboard
+Web Dashboard
 - **Modern UI**: Beautiful, responsive dashboard with real-time updates
 - **Live Charts**: Trend visualization with Chart.js
 - **Auto-Refresh**: Updates every 30 seconds
 - **Color-Coded Metrics**: Green/Yellow/Red status indicators
 - **Mobile-Friendly**: Responsive design for all devices
 
-### 🔄 Auto-Restart & High Availability
+ Auto-Restart & High Availability
 - **Systemd Integration**: Service management and auto-restart
 - **Watchdog Script**: Self-healing monitoring of the monitoring system
 - **Docker Health Checks**: Container-level health validation
 - **Graceful Restart**: Zero-downtime deployments
 
-### 📈 Application Metrics
+ Application Metrics
 - **Response Time Tracking**: Monitor API performance
 - **Error Rate Analysis**: Track application errors
 - **Throughput Monitoring**: Requests per minute
 - **Active Connections**: Real-time connection tracking
 
-## 🏗️ Architecture
+ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -119,7 +119,7 @@ A comprehensive enterprise-grade monitoring and alerting system with real-time m
         └─────────────────────────────────┘
 ```
 
-## 🛠️ Tech Stack
+Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -134,9 +134,9 @@ A comprehensive enterprise-grade monitoring and alerting system with real-time m
 | Alerts | Nodemailer, Slack Webhooks |
 | OS | Linux (Ubuntu/Debian) |
 
-## 📦 Quick Start
+ Quick Start
 
-### Prerequisites
+ Prerequisites
 
 ```bash
 # Update system
@@ -154,7 +154,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-### Installation
+Installation
 
 ```bash
 # 1. Clone repository
@@ -175,7 +175,7 @@ python3 -m http.server 8000
 # Visit: http://localhost:8000/dashboard.html
 ```
 
-### Systemd Setup (Production)
+ Systemd Setup (Production)
 
 ```bash
 # Copy service files
@@ -200,9 +200,9 @@ systemctl list-timers
 
 See [docs/SYSTEMD_SETUP.md](docs/SYSTEMD_SETUP.md) for detailed configuration.
 
-## 🎯 Usage
+Usage
 
-### Manual Monitoring
+ Manual Monitoring
 
 ```bash
 # Collect system metrics
@@ -224,7 +224,7 @@ See [docs/SYSTEMD_SETUP.md](docs/SYSTEMD_SETUP.md) for detailed configuration.
 ./scripts/monitor.sh
 ```
 
-### API Endpoints
+ API Endpoints
 
 ```bash
 # Public endpoints (no authentication)
@@ -244,7 +244,7 @@ curl -H "X-API-Token: admin-token-123" http://localhost:8080/logs/system
 curl -H "X-API-Token: admin-token-123" http://localhost:8080/logs/audit
 ```
 
-### Configure Alerts
+ Configure Alerts
 
 ```bash
 # Email alerts
@@ -260,9 +260,9 @@ export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
 ./scripts/alert_engine_v2.sh
 ```
 
-## 🔧 Configuration
+ Configuration
 
-### Alert Thresholds
+Alert Thresholds
 
 Edit [scripts/alert_engine_v2.sh](scripts/alert_engine_v2.sh):
 ```bash
@@ -279,7 +279,7 @@ DISK_WARNING=85
 DISK_CRITICAL=95
 ```
 
-### Log Retention
+Log Retention
 
 Edit [scripts/log_manager.sh](scripts/log_manager.sh):
 ```bash
@@ -287,9 +287,9 @@ MAX_LOG_SIZE=10485760  # 10MB
 MAX_LOG_AGE=7          # 7 days
 ```
 
-### API Tokens
+API Tokens
 
-⚠️ **IMPORTANT**: Change default tokens in production!
+*IMPORTANT*: Change default tokens in production!
 
 Edit [backend/index-v2.js](backend/index-v2.js):
 ```javascript
@@ -305,7 +305,7 @@ Generate secure tokens:
 openssl rand -hex 32
 ```
 
-## 📁 Project Structure
+Project Structure
 
 ```
 prod-monitoring/
@@ -350,9 +350,9 @@ prod-monitoring/
 └── README.md
 ```
 
-## 🔍 Monitoring Capabilities
+ Monitoring Capabilities
 
-### System Metrics
+System Metrics
 - CPU Usage (%)
 - Memory Usage (%)
 - Disk Usage (%)
@@ -361,14 +361,14 @@ prod-monitoring/
 - System Uptime
 - Network RX/TX bytes
 
-### Process Health
+Process Health
 - Docker container status
 - systemd service status
 - Port availability check
 - Container restart count
 - Service uptime tracking
 
-### Application Metrics
+Application Metrics
 - Total requests count
 - Average response time
 - Error rate (%)
@@ -376,14 +376,14 @@ prod-monitoring/
 - Active connections
 - HTTP status code distribution
 
-### Security Monitoring
+Security Monitoring
 - Unauthorized port detection
 - Failed SSH login attempts
 - Successful root logins
 - Sudo command usage
 - Docker container tracking
 
-### System Logs
+ System Logs
 - Journal errors and warnings
 - Kernel messages (dmesg)
 - Syslog analysis
@@ -392,7 +392,7 @@ prod-monitoring/
 - OOM (Out of Memory) events
 - Filesystem errors
 
-## 🚨 Alerting Conditions
+ Alerting Conditions
 
 | Metric | WARNING | CRITICAL |
 |--------|---------|----------|
@@ -403,7 +403,7 @@ prod-monitoring/
 | Services | Any non-critical down | Critical service down |
 | Containers | 1-2 down | All down |
 
-## 🔐 Security
+Security
 
 See [docs/SECURITY.md](docs/SECURITY.md) for comprehensive security configuration including:
 
@@ -416,22 +416,22 @@ See [docs/SECURITY.md](docs/SECURITY.md) for comprehensive security configuratio
 - SSL/TLS configuration
 - Security best practices
 
-### Quick Security Checklist
+Quick Security Checklist
 
-- [ ] Change all default API tokens
-- [ ] Set up SSH key authentication
-- [ ] Disable password authentication
-- [ ] Configure sudo policies
-- [ ] Enable UFW firewall
-- [ ] Set up SSL/TLS
-- [ ] Configure log rotation
-- [ ] Enable audit logging
-- [ ] Set up fail2ban
-- [ ] Regular security audits
+-  Change all default API tokens
+-  Set up SSH key authentication
+-  Disable password authentication
+-  Configure sudo policies
+-  Enable UFW firewall
+-  Set up SSL/TLS
+-  Configure log rotation
+-  Enable audit logging
+-  Set up fail2ban
+-  Regular security audits
 
-## 📊 Prometheus & Grafana Integration
+ Prometheus & Grafana Integration
 
-### Prometheus Setup
+Prometheus Setup
 
 ```bash
 # Start Prometheus
@@ -449,7 +449,7 @@ scrape_configs:
     metrics_path: '/metrics/prometheus'
 ```
 
-### Grafana Dashboard
+Grafana Dashboard
 
 ```bash
 # Start Grafana
@@ -462,9 +462,9 @@ docker run -d -p 3000:3000 grafana/grafana
 2. Import dashboard ID: 1860 (Node Exporter)
 3. Create custom dashboards
 
-## 🐛 Troubleshooting
+ Troubleshooting
 
-### Logs Not Appearing
+ Logs Not Appearing
 
 ```bash
 # Check permissions
@@ -476,7 +476,7 @@ chmod 755 data
 grep -r "/home/emrecan/home/prod-monitoring" scripts/
 ```
 
-### Docker Containers Won't Start
+ Docker Containers Won't Start
 
 ```bash
 # Check logs
@@ -487,7 +487,7 @@ docker-compose down
 docker-compose up -d --build
 ```
 
-### Alerts Not Sending
+ Alerts Not Sending
 
 ```bash
 # Check alert state
@@ -503,7 +503,7 @@ echo "Test" | mail -s "Test Alert" your@email.com
 curl -X POST $SLACK_WEBHOOK_URL -H 'Content-Type: application/json' -d '{"text":"Test"}'
 ```
 
-### Systemd Service Failures
+Systemd Service Failures
 
 ```bash
 # Check status
@@ -517,9 +517,9 @@ cd /home/emrecan/home/prod-monitoring
 docker-compose up
 ```
 
-## 📈 Performance Optimization
+Performance Optimization
 
-### Resource Limits
+ Resource Limits
 
 Edit `docker-compose.yml`:
 ```yaml
@@ -532,7 +532,7 @@ services:
           memory: 512M
 ```
 
-### Log Optimization
+Log Optimization
 
 ```bash
 # Compress old logs
@@ -542,7 +542,7 @@ find data/ -name "*.log" -mtime +7 -exec gzip {} \;
 find data/ -name "*.gz" -mtime +30 -delete
 ```
 
-## 🤝 Contributing
+ Contributing
 
 Contributions welcome! Please:
 
@@ -552,18 +552,18 @@ Contributions welcome! Please:
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+ License
 
 MIT License - see [LICENSE](LICENSE) file
 
-## 👤 Author
+Author
 
-**EmrecanKorpinar**
+EmrecanKorpinar
 
 - GitHub: [@EmrecanKorpinar](https://github.com/EmrecanKorpinar)
 - Project: [prod-monitoring](https://github.com/EmrecanKorpinar/prod-monitoring)
 
-## 🙏 Acknowledgments
+ Acknowledgments
 
 - Winston for excellent logging
 - Prometheus for metrics standard
@@ -571,8 +571,4 @@ MIT License - see [LICENSE](LICENSE) file
 - Docker for containerization
 - Systemd for service management
 
----
 
-**⭐ If you find this project useful, please consider giving it a star!**
-
-**Made with ❤️ for reliable production monitoring**
